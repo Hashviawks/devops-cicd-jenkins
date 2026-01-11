@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/Hashviawks/devops-cicd-jenkins.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-app .'
