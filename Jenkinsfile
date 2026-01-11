@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                 docker stop my-app || true
                 docker remove my-app || true
-                docker run -d -p 5000:5000 my-app my-app
+                docker run -d -p 5000:5000 --name my-app my-app
                 '''
             }
         } 
